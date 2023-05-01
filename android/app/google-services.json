@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "891561086043",
+    "project_id": "cryptic-puzzle",
+    "storage_bucket": "cryptic-puzzle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891561086043:android:2969299bcdcbf63fcf837e",
+        "android_client_info": {
+          "package_name": "com.glowingmercury.cryptopuz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891561086043-876c4ruasdlm8rneeukgdnvnen6tvrdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoins3NmCSCECFcDp1QevqUVSmvIob5ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891561086043-876c4ruasdlm8rneeukgdnvnen6tvrdb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
