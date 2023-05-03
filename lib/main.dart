@@ -62,6 +62,10 @@ class MyApp extends StatelessWidget {
           value: FirebaseDynamicLinks.instance.onLink,
           initialData: null,
         ),
+        StreamProvider<PendingDynamicLinkData?>.value(
+          value: FirebaseDynamicLinks.instance.getInitialLink().asStream(),
+          initialData: null,
+        ),
       ],
       child: Builder(builder: (context) {
         return MaterialApp(

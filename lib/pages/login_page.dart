@@ -74,8 +74,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void googleSignInHandler({required BuildContext context}) async {
-    showLoadingDialog(context: context);
-
     try {
       await Provider.of<AuthService>(context, listen: false).signInWithGoogle();
 
@@ -88,7 +86,6 @@ class _LoginPageState extends State<LoginPage> {
       }
     } catch (error) {
       developerLog(error);
-      Navigator.of(context).pop();
       showSnackBar(
           context: context,
           text: "Error while google sign in, error: $error",

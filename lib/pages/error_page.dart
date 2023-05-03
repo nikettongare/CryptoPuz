@@ -69,7 +69,7 @@ class _ErrorPageState extends State<ErrorPage> {
               ),
               EventButton(
                 callback: () {
-                  Provider.of<AuthService>(context, listen: false).signOut();
+                  Provider.of<AuthService>(context, listen: false).signOut(context: context);
                 },
                 minWidth: width,
                 text: "Sign Out",

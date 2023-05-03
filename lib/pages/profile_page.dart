@@ -119,7 +119,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: EventButton(
                       callback: () {
                         Provider.of<AuthService>(context, listen: false)
-                            .signOut();
+                            .signOut(context: context);
                       },
                       minWidth: 60,
                       child: Icon(

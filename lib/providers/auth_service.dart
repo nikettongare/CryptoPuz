@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:crypto_puz/utils/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
@@ -155,13 +156,18 @@ class AuthService extends ChangeNotifier {
     return userResult.response;
   }
 
-  Future<void> signOut() async {
+  Future<void> signOut({required BuildContext context}) async {
     try {
       // firebase auth sign out
       await _firebaseAuth.signOut();
       // google auth sign out
       await _googleSignIn.signOut();
+
+      if(context.mounted) {
+        Navigator.of(context).pushReplacementNamed("/");
+      }
     } catch (error) {
+      developerLog("Error when signing out the user: $error");
       Future.error("Error when signing out the user!");
     }
   }
